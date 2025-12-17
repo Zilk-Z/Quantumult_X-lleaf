@@ -1,26 +1,29 @@
 # =========================================
-# 起点读书 · 终极福利广告规则
-# 自动直连福利广告，拦截非福利广告
+# 起点读书 · 福利广告直连 + 非福利广告拦截
+# 说明：
+# 1. 福利广告相关域名全部直连(DIRECT)
+# 2. 非福利广告域名可拦截(REJECT)
+# 3. 保证章节/主站接口不受影响
 # =========================================
 
-# === 福利广告域名（必须直连） ===
-DOMAIN-SUFFIX,cococdn.qidian.com,DIRECT
-DOMAIN-SUFFIX,ad.qidian.com,DIRECT
-DOMAIN-SUFFIX,qidian.gtimg.com,DIRECT
-DOMAIN-SUFFIX,ue.qidian.com,DIRECT
-DOMAIN-SUFFIX,h5.if.qidian.com,DIRECT
-DOMAIN-SUFFIX,mage*.if.qidian.com,DIRECT
-DOMAIN-SUFFIX,activity.if.qidian.com,DIRECT
-DOMAIN-SUFFIX,reward.if.qidian.com,DIRECT
-DOMAIN-SUFFIX,promo.if.qidian.com,DIRECT
+# === 福利广告域名 (DIRECT) ===
+HOST-SUFFIX,h5.if.qidian.com,DIRECT
+HOST-SUFFIX,magev6.if.qidian.com,DIRECT
+HOST-SUFFIX,activity.if.qidian.com,DIRECT
+HOST-SUFFIX,reward.if.qidian.com,DIRECT
+HOST-SUFFIX,promo.if.qidian.com,DIRECT
+HOST-SUFFIX,cococdn.qidian.com,DIRECT
+HOST-SUFFIX,ad.qidian.com,DIRECT
+HOST-SUFFIX,qidian.gtimg.com,DIRECT
+HOST-SUFFIX,ue.qidian.com,DIRECT
 
-# === 统计/追踪（建议直连，避免影响奖励） ===
-DOMAIN-SUFFIX,analytics.qidian.com,DIRECT
-DOMAIN-SUFFIX,track.qidian.com,DIRECT
-DOMAIN-SUFFIX,log.qidian.com,DIRECT
+# === 统计/追踪 (DIRECT, 避免影响奖励) ===
+HOST-SUFFIX,analytics.qidian.com,DIRECT
+HOST-SUFFIX,track.qidian.com,DIRECT
+HOST-SUFFIX,log.qidian.com,DIRECT
 
-# === 非福利广告资源（可选拦截，减少广告） ===
-DOMAIN-SUFFIX,mobads.baidu.com,REJECT
-DOMAIN-SUFFIX,adshow.com,REJECT
-DOMAIN-SUFFIX,adsafeprotected.com,REJECT
-DOMAIN-SUFFIX,doubleclick.net,REJECT
+# === 非福利广告资源 (REJECT, 可选) ===
+HOST-SUFFIX,mobads.baidu.com,REJECT
+HOST-SUFFIX,adshow.com,REJECT
+HOST-SUFFIX,adsafeprotected.com,REJECT
+HOST-SUFFIX,doubleclick.net,REJECT
