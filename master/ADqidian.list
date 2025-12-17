@@ -1,6 +1,24 @@
-# === 起点读书 · 福利广告必须直连 ===
+# =========================================
+# 起点读书 · 福利广告直连规则
+# 说明：
+# 1. 福利广告相关域名不拦截，确保奖励到账
+# 2. 非福利广告可选 REJECT
+# =========================================
+
+# === 福利广告域名（必须直连） ===
 DOMAIN-SUFFIX,cococdn.qidian.com,DIRECT
 DOMAIN-SUFFIX,ad.qidian.com,DIRECT
 DOMAIN-SUFFIX,qidian.gtimg.com,DIRECT
 DOMAIN-SUFFIX,ue.qidian.com,DIRECT
+DOMAIN-SUFFIX,h5.if.qidian.com,DIRECT   # 新增福利广告域名
+
+# === 统计/追踪（可选择直连或拦截，避免影响奖励） ===
 DOMAIN-SUFFIX,analytics.qidian.com,DIRECT
+DOMAIN-SUFFIX,track.qidian.com,DIRECT
+DOMAIN-SUFFIX,log.qidian.com,DIRECT
+
+# === 非福利广告资源（可选拦截，减少广告） ===
+DOMAIN-SUFFIX,mobads.baidu.com,REJECT
+DOMAIN-SUFFIX,adshow.com,REJECT
+DOMAIN-SUFFIX,adsafeprotected.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
