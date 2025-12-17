@@ -1,3 +1,3 @@
 # > Speedtest by Ookla
-USER-AGENT,SpeedTest*
-DOMAIN-KEYWORD,speedtest
+USER-AGENT,SpeedTest*,Speedtest
+DOMAIN-KEYWORD,speedtest,Speedtest
