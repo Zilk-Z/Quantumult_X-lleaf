@@ -1,8 +1,8 @@
 # =========================================
-# 起点读书 · 福利广告直连 + 非福利广告拦截
+# 起点读书 · 终极福利广告规则
 # 说明：
-# 1. 福利广告相关域名全部直连(DIRECT)
-# 2. 非福利广告域名可拦截(REJECT)
+# 1. 福利广告域名全部直连 (DIRECT)
+# 2. 非福利广告域名拦截 (REJECT)
 # 3. 保证章节/主站接口不受影响
 # =========================================
 
@@ -16,13 +16,14 @@ HOST-SUFFIX,cococdn.qidian.com,DIRECT
 HOST-SUFFIX,ad.qidian.com,DIRECT
 HOST-SUFFIX,qidian.gtimg.com,DIRECT
 HOST-SUFFIX,ue.qidian.com,DIRECT
+HOST-SUFFIX,path.book.qq.com,DIRECT
 
-# === 统计/追踪 (DIRECT, 避免影响奖励) ===
+# === 统计/追踪 (DIRECT) ===
 HOST-SUFFIX,analytics.qidian.com,DIRECT
 HOST-SUFFIX,track.qidian.com,DIRECT
 HOST-SUFFIX,log.qidian.com,DIRECT
 
-# === 非福利广告资源 (REJECT, 可选) ===
+# === 非福利广告资源 (REJECT) ===
 HOST-SUFFIX,mobads.baidu.com,REJECT
 HOST-SUFFIX,adshow.com,REJECT
 HOST-SUFFIX,adsafeprotected.com,REJECT
